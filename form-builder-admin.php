@@ -29,8 +29,7 @@ class Woopo_Admin {
         global $submenu;
 
         $capability = Woopo_Functions::form_capability();
-        $hook = add_menu_page( __( 'Woo Product Options - The Best and Fastest Form Builder Ever', 'woopo' ), 'Woo Product Options', $capability, 'woopo', array( $this, 'woopo_page') );
-        add_submenu_page( 'edit.php?post_type=product', __( 'Woo Product Options - The Best and Fastest Form Builder Ever', 'woopo' ), __( 'Woo Product Options', 'woopo' ), $capability, 'woopo', array( $this, 'woopo_page') );
+        $hook = add_submenu_page( 'edit.php?post_type=product', __( 'Woo Product Options - The Best and Fastest Form Builder Ever', 'woopo' ), __( 'Woo Product Options', 'woopo' ), $capability, 'woopo', array( $this, 'woopo_page') );
 
         if ( current_user_can( $capability ) ) {
             $submenu = apply_filters( 'woopo_admin_menu', $submenu, $hook, $capability );
@@ -39,10 +38,10 @@ class Woopo_Admin {
 
         // only admins should see the settings page
         if ( current_user_can( 'manage_options' ) ) {
-            $submenu['edit.php?post_type=product'][] = array( __( 'Woopo Settings', 'woopo' ), 'manage_options', 'edit.php?post_type=product&page=woopo#/settings' );
+            $submenu['edit.php?post_type=product'][] = array( __( 'Product Options Settings', 'woopo' ), 'manage_options', 'edit.php?post_type=product&page=woopo#/settings' );
         }
 
-	    $submenu['edit.php?post_type=product'][] = array( __( 'Woopo Help', 'woopo' ), 'manage_options', 'edit.php?post_type=product&page=woopo#/help' );
+	    $submenu['edit.php?post_type=product'][] = array( __( 'Help', 'woopo' ), 'manage_options', 'edit.php?post_type=product&page=woopo#/help' );
 
         if( !Woopo_Functions::is_pro() ) {
 	        $submenu['edit.php?post_type=product'][] = array( __( 'Upgrage Woo Product Options', 'woopo' ), 'manage_options', 'edit.php?post_type=product&page=woopo#/get-pro' );

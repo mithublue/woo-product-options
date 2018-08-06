@@ -75,6 +75,7 @@ var global_settings = woopo_apply_filters( 'woopo_global_settings', {} );
 /*** Store ***/
 var store_obj = {
     state: {
+        loading: false,
         notice: {
             type: '',
             header: '',
@@ -113,6 +114,9 @@ var store_obj = {
         }
     },
     getters: {
+        loading: function (state) {
+            return state.loading;
+        },
         field_attr: function (state) {
             return state.field_attr;
         },
@@ -199,6 +203,9 @@ var store_obj = {
         }
     },
     mutations: {
+        change_loading: function (state, {isTrue}) {
+            state.loading = isTrue;
+        },
         //
         set_is_editing: function (state, {}) {
             state.is_editing = true;
@@ -285,6 +292,7 @@ var store_obj = {
 
         },
         update_form: function (state, {status, form_id, callback}) {
+            state.loading = true;
             var edit_form_id = ( typeof form_id !== 'undefined' ) ? form_id : ( state.edit_form_id ? state.edit_form_id : 0);
 
             jQuery.post(
@@ -316,6 +324,7 @@ var store_obj = {
                             msg: 'Something went wrong !'
                         };
                     }
+                    state.loading = false;
                     setTimeout(function () {
                         state.notice = {
                             type: '',
@@ -328,6 +337,7 @@ var store_obj = {
         },
 
         get_forms: function (state, {page, status}) {
+            state.loading = true;
             jQuery.post(
                 ajaxurl,
                 {
@@ -342,10 +352,12 @@ var store_obj = {
                         state.forms = data.data.forms;
                         state.form_count = data.data.counts
                     }
+                    state.loading = false;
                 }
             )
         },
         get_form: function (state, {id, callback}) {
+            state.loading = true;
             jQuery.post(
                 ajaxurl,
                 {
@@ -373,10 +385,12 @@ var store_obj = {
                         }
                         //state.form_settings.s = data.data.form_settings.s ? data.data.form_settings.s : {};
                     }
+                    state.loading = false;
                 }
             )
         },
         delete_form: function (state, {form_id,soft}) {
+            state.loading = true;
             var trashDelete;
 
             if( typeof soft === 'undefined' ) {
@@ -401,6 +415,7 @@ var store_obj = {
                             state.forms.splice(state.forms.indexOf(item[0]),1);
                         }
                     }
+                    state.loading = false;
                 }
             )
         },
@@ -508,6 +523,9 @@ var store_obj = {
         }
     },
     actions: {
+        change_loading: function (context, {isTrue}) {
+            context.commit('change_loading',{isTrue: isTrue});
+        },
         import_fields: function (context, {from,to}) {
             //pro
         },

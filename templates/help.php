@@ -12,7 +12,7 @@
 							<div class="mb20">
 								<?php _e( 'Our official detailed documentation will help you get a good ground on the thing you are looking for', 'woopo'); ?>
 							</div>
-							<a href="http://docs.cybercraftit.com/docs/woopo-user-documentation/" target="_blank" class="el-button"><?php _e( 'Go to Documentation', 'woopo' ); ?></a>
+							<a href="http://docs.cybercraftit.com/docs/woo-product-options/" target="_blank" class="el-button"><?php _e( 'Go to Documentation', 'woopo' ); ?></a>
 						</div>
 					</div>
 				</el-card>
@@ -44,7 +44,7 @@
 							<div class="mb20">
 								<?php _e( 'Report us if any bug or issue is found to help us make this product better.', 'woopo'); ?>
 							</div>
-							<a href="https://github.com/mithublue/woopo/issues" target="_blank" class="el-button"><?php _e( 'Report to Github', 'woopo' ); ?></a>
+							<a href="https://github.com/mithublue/woo-product-options/issues" target="_blank" class="el-button"><?php _e( 'Report to Github', 'woopo' ); ?></a>
 						</div>
 					</div>
 				</el-card>
@@ -78,7 +78,7 @@
 							<div class="mb20">
 								<?php _e( 'Your valuable feedback and review encourage us to make more awesomeness. :) ', 'woopo'); ?>
 							</div>
-							<a href="https://wordpress.org/support/plugin/woopo/reviews/?rate=5#new-post" target="_blank" class="el-button"><?php _e( 'Rate Woo Product Options', 'woopo' ); ?></a>
+							<a href="https://wordpress.org/support/plugin/woo-product-options/reviews/?rate=5#new-post" target="_blank" class="el-button"><?php _e( 'Rate Woo Product Options', 'woopo' ); ?></a>
 						</div>
 					</div>
 				</el-card>

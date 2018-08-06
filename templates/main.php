@@ -1,7 +1,7 @@
 <div class="wrap">
     <div id="woopo-app">
         <div class="mt20">
-            <router-view></router-view>
+            <router-view v-loading.fullscreen.lock="loading"></router-view>
         </div>
     </div>
 </div>

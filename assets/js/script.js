@@ -35,5 +35,10 @@ var app = new Vue({
     store: store,
     router: router,
     el: '#woopo-app',
-    data: {}
+    data: {},
+    computed: {
+        loading: function () {
+            return this.$store.getters.loading;
+        }
+    }
 });

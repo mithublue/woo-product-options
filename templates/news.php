@@ -39,6 +39,7 @@
 			}
         },
 		mounted: function () {
+            this.$store.dispatch('change_loading',{isTrue:true});
 	        var _this = this;
             (function ($) {
                 $.post(
@@ -47,10 +48,10 @@
 	                    action: 'cc_get_news'
 	                },
 	                function (data) {
-
 		                if( data.success ) {
                             _this.response = data.data.response
 		                }
+                        _this.$store.dispatch('change_loading',{isTrue:false});
                     }
                 )
             }(jQuery));

@@ -19,7 +19,7 @@ define( 'WOOPO_VERSION', '1.0' );
 define( 'WOOPO_ROOT', dirname(__FILE__) );
 define( 'WOOPO_ASSET_PATH', plugins_url('assets',__FILE__) );
 define( 'WOOPO_BASE_FILE', __FILE__ );
-define( 'WOOPO_PRODUCTION', false );
+define( 'WOOPO_PRODUCTION', true );
 
 Class Woopo_Init {
 	/**

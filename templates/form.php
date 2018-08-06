@@ -20,7 +20,8 @@
                             </div>
                         </div>
                         <el-tabs type="border-card">
-                            <el-tab-pane label="<?php _e( 'Form Builder', 'woopo' ); ?>">
+                            <el-tab-pane label="<?php _e( '
+                            Options Builder', 'woopo' ); ?>">
                                 <div class="woopo_form_builder_panel">
                                     <template v-if="form_settings.form_settings.s.is_multistep">
                                         <template v-if="is_plainform_data_exist">

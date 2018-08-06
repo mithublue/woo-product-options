@@ -265,7 +265,7 @@ class Woopo_Ajax_actions {
 	public static function dissmiss_news_notice() {
 		$notices = sm_get_notice('sm_admin_notices' );
 		$notices['news_notice']['is_dismissed'] = true;
-		if( isset( $_POST['last_news_date'] ) ) {
+		if( isset( $_POST['last_news_date'] ) && is_numeric( $_POST['last_news_date'] ) ) {
 			$notices['news_notice']['last_news_date'] = $_POST['last_news_date'];
 		} else {
 			$notices['news_notice']['last_news_date'] = 0;

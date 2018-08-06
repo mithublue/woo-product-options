@@ -29,7 +29,7 @@ Setting the option field required , you can make sure that the customer is filli
 
 === Numerous fields ===
 
-Lots of fields are there in the form builder to create form for post. Almost 25 Fields ( 18 fields in free version ) currently are supported.
+Lots of fields are there in the form builder to create form for post. Almost 25 Fields ( 6 fields in free version ) currently are supported.
 
 === Drag and drop Option Group Builder. No coding required ===
 
@@ -51,6 +51,18 @@ You (admin) can set a time schedule in which the option group will be availabe t
 === Responsive ===
 
 === 24 grids support ===
+
+
+== Pro Features ==
+
+* Premium support.
+* Automatic and regular update.
+* Role based permission. You can define the roles that you want to have access for the form
+* Multistep functionality.
+* 14 New and complex fields unlocked.
+* Conditional fields. You can set field to be dependable on other fields when rendering.
+* Advanced settings.
+* And more...
 
 == Installation ==
 

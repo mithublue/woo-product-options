@@ -54,7 +54,7 @@ Class Woopo_Init {
 	public function action_links($links) {
 		$links[] = '<a href="https://cybercraftit.com/contact/" target="_blank">'.__( 'Ask for Modification', 'woopo' ).'</a>';
 		if( ! Woopo_Functions::is_pro() ) {
-			$links[] = '<a href="https://cybercraftit.com/wp-frontend-pro/" style="color: #fa0000;" target="_blank">'.__( 'Upgrade to Pro', 'woopo' ).'</a>';
+			$links[] = '<a href="https://cybercraftit.com/woo-product-options-pro/" style="color: #fa0000;" target="_blank">'.__( 'Upgrade to Pro', 'woopo' ).'</a>';
 		}
 		return $links;
 	}

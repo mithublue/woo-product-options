@@ -11,6 +11,11 @@ Woo Product Options with Options Layout Builder
 
 == Description ==
 
+== Documentation ==
+
+Our complete documentation on Woo Product Options and Woo Product Options Pro is here
+<a href="http://docs.cybercraftit.com/docs/woo-product-options/" target="_blank">http://docs.cybercraftit.com/docs/woo-product-options/</a>
+
 Woo Product Options plugin provides an easy way to manage extra product options displayed in product page. With this plugin you can add a custom field to product page. For example, you can add a text field to product page using which a buyer can enter extra information related to the purchase.
 
 But that's not all, with options layout builder you can build layout for options group in which format you want to display them in product page.
